@@ -1,13 +1,24 @@
+//-----------------------------------------------------------------------------
+// Module: propagate_logic
+// Description: This module implements the propagate logic using NAND gates. PowerPoint L4 S34
+// Author: Christoffer, Marcus
+//-----------------------------------------------------------------------------
+// Inputs:
+//   a - Input logic signal
+//   b - Input logic signal
+// Outputs:
+//   p - Propagate output logic signal
+//   g - Generate output logic signal
+//-----------------------------------------------------------------------------
+
 module propagate_logic (
     input  logic a,
     input  logic b,
-    output logic p,
-    output logic g
+    output logic p
 );
 
     logic nand1_out;
     logic nand2_out;
-    logic nand4_out;
 
 // Start of a input propogate logic
 nand2_out u1 (
@@ -28,20 +39,6 @@ nand2_out u3 (
     .a(nand1_out),
     .b(nand2_out),
     .y(p)
-);
-
-// Start of generate logic
-nand2_out u4 (
-    .a(a),
-    .b(b),
-    .y(nand4_out)
-);
-
-// Output of generate logic
-nand2_out u5 (
-    .a(nand4_out),
-    .b(nand4_out),
-    .y(g)
 );
 
 endmodule
