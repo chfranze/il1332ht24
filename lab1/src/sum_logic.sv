@@ -1,8 +1,32 @@
+//-----------------------------------------------------------------------------
+// Module: sum_logic
+// Description:
+// Author: Christoffer, Marcus
+//-----------------------------------------------------------------------------
+// Inputs:
+// Outputs:
+//-----------------------------------------------------------------------------
+
+
 module sum_logic (
     input  logic a,
     input  logic b,
     output logic carry_in,
     output logic sum
 );
-  //TODO: Complete the code
+
+    logic xor1_out;
+
+xor2_delay x1 (
+    .a(a),
+    .b(b),
+    .y(xor1_out)
+);
+
+xor2_delay x2 (
+    .a(carry_in),
+    .b(xor1_out),
+    .y(sum)
+);
+
 endmodule
