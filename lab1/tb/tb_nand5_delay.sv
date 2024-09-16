@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module tb_nand5_delay;
 
 logic [4:0] in;
