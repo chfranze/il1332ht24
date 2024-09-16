@@ -46,7 +46,7 @@ nand4_delay u4 (
     .a(p2),
     .b(p1),
     .c(p0),
-    .d(carry_in0)
+    .d(carry_in0),
     .y(nand4_out)
 );
 
