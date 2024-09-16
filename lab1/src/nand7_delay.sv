@@ -7,7 +7,7 @@
 // Outputs:
 //-----------------------------------------------------------------------------
 
-module nand6_delay (
+module nand7_delay (
     input  logic in1,
     input  logic in2,
     input  logic in3,
