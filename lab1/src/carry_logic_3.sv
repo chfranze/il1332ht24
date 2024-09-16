@@ -59,7 +59,7 @@ nand5_delay u5 (
     .c(p1),
     .d(p0),
     .e(carry_in0),
-    .y(nand4_out)
+    .y(nand5_out)
 );
 
 nand5_delay u6 (
