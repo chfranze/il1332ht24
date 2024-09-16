@@ -86,7 +86,7 @@ nand7_delay u7 (
     .in5(p1),
     .in6(p0),
     .in7(carry_in0),
-    .out(nand6_out)
+    .out(nand7_out)
 );
 
 nand7_delay u8 (

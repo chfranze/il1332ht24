@@ -18,15 +18,15 @@ module carry_logic_0 (
     logic nand2_out;
 
 nand2_delay u1 (
-  .a(p0),
-  .b(carry_in0),
+  .a(g0),
+  .b(g0),
   .y(nand1_out)
 );
 
 nand2_delay u2 (
-  .a(g0),
-  .b(g0),
-  .y(nand1_out)
+  .a(p0),
+  .b(carry_in0),
+  .y(nand2_out)
 );
 
 nand2_delay u3 (
