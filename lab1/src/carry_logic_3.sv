@@ -54,21 +54,21 @@ nand4_delay u4 (
 );
 
 nand5_delay u5 (
-    .a(p3),
-    .b(p2),
-    .c(p1),
-    .d(p0),
-    .e(carry_in0),
-    .y(nand5_out)
+    .in1(p3),
+    .in2(p2),
+    .in3(p1),
+    .in4(p0),
+    .in5(carry_in0),
+    .out(nand5_out)
 );
 
 nand5_delay u6 (
-  .a(nand1_out),
-  .b(nand2_out),
-  .c(nand3_out),
-  .d(nand4_out),
-  .e(nand5_out),
-  .y(carry_out)
+  .in1(nand1_out),
+  .in2(nand2_out),
+  .in3(nand3_out),
+  .in4(nand4_out),
+  .in5(nand5_out),
+  .out(carry_out)
 );
 
 endmodule

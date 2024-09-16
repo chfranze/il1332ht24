@@ -21,21 +21,21 @@ module propagate_logic (
     logic nand2_out;
 
 // Start of a input propogate logic
-nand2_out u1 (
+nand2_delay u1 (
     .a(a),
     .b(a),
     .y(nand1_out)
 );
 
 // Start of b propogate logic
-nand2_out u2 (
+nand2_delay u2 (
     .a(b),
     .b(b),
     .y(nand2_out)
 );
 
 // Output of propogate logic
-nand2_out u3 (
+nand2_delay u3 (
     .a(nand1_out),
     .b(nand2_out),
     .y(p)

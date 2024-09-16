@@ -66,71 +66,71 @@ nand4_delay u4 (
 );
 
 nand5_delay u5 (
-    .a(p7),
-    .b(p6),
-    .c(p5),
-    .d(p4),
-    .e(p3),
-    .y(nand5_out)
+    .in1(p7),
+    .in2(p6),
+    .in3(p5),
+    .in4(p4),
+    .in5(p3),
+    .out(nand5_out)
 );
 
 nand6_delay u6 (
-    .a(p7),
-    .b(p6),
-    .c(p5),
-    .d(p4),
-    .e(p3),
-    .f(p2),
-    .y(nand6_out)
+    .in1(p7),
+    .in2(p6),
+    .in3(p5),
+    .in4(p4),
+    .in5(p3),
+    .in6(p2),
+    .out(nand6_out)
 );
 
 nand7_delay u7 (
-    .a(p7),
-    .b(p6),
-    .c(p5),
-    .d(p4),
-    .e(p3),
-    .f(p2),
-    .g(p1),
-    .y(nand6_out)
+    .in1(p7),
+    .in2(p6),
+    .in3(p5),
+    .in4(p4),
+    .in5(p3),
+    .in6(p2),
+    .in7(p1),
+    .out(nand6_out)
 );
 
 nand8_delay u8 (
-    .a(p7),
-    .b(p6),
-    .c(p5),
-    .d(p4),
-    .e(p3),
-    .f(p2),
-    .g(p1),
-    .h(p0),
-    .y(nand7_out)
+    .in1(p7),
+    .in2(p6),
+    .in3(p5),
+    .in4(p4),
+    .in5(p3),
+    .in6(p2),
+    .in7(p1),
+    .in8(p0),
+    .out(nand7_out)
 );
 
 nand9_delay u9 (
-    .a(p7),
-    .b(p6),
-    .c(p5),
-    .d(p4),
-    .e(p3),
-    .f(p2),
-    .g(p1),
-    .h(p0),
-    .i(carry_in0),
-    .y(nand8_out)
+    .in1(p7),
+    .in2(p6),
+    .in3(p5),
+    .in4(p4),
+    .in5(p3),
+    .in6(p2),
+    .in7(p1),
+    .in8(p0),
+    .in9(carry_in0),
+    .out(nand8_out)
 );
 
 nand9_delay u10 (
-  .a(nand1_out),
-  .b(nand2_out),
-  .c(nand3_out),
-  .d(nand4_out),
-  .e(nand5_out),
-  .f(nand6_out),
-  .g(nand7_out),
-  .h(nand7_out),
-  .i(nand8_out),
-  .y(carry_out)
+  .in1(nand1_out),
+  .in2(nand2_out),
+  .in3(nand3_out),
+  .in4(nand4_out),
+  .in5(nand5_out),
+  .in6(nand6_out),
+  .in7(nand7_out),
+  .in8(nand7_out),
+  .in9(nand8_out),
+  .out(carry_out)
 );
 
 endmodule

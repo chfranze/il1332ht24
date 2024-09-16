@@ -15,13 +15,13 @@ module generate_logic (
 
     logic nand1_out;
 
-nand2_out u1 (
+nand2_delay u1 (
     .a(b),
     .b(b),
     .y(nand1_out)
 );
 
-nand2_out u2 (
+nand2_delay u2 (
     .a(nand1_out),
     .b(nand1_out),
     .y(g)

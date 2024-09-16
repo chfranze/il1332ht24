@@ -40,8 +40,8 @@ module cla_8bit (
         sum_logic sl (
           .a(a[k]),
           .b(b[k]),
-          .cin(c[k]),
-          .s(sum[k])
+          .carry_in(c[k]),
+          .sum(sum[k])
         );
       end
   endgenerate
@@ -50,8 +50,8 @@ module cla_8bit (
   sum_logic sl_8 (
     .a(a[7]),
     .b(b[7]),
-    .cin(c[8]),
-    .s(sum[8])
+    .carry_in(c[8]),
+    .sum(sum[8])
   );
 
   assign c[0] = 1'b0; // cin is 0

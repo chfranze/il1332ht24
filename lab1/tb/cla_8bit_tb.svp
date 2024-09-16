@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module cla_8bit_tb;
 
   logic [7:0] a, b;
