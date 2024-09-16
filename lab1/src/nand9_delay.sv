@@ -41,7 +41,7 @@ module nand9_delay (
       .y(nand2_out)
   );
 
-  nand2_delay u3 (
+  nand3_delay u3 (
       .a(in7),
       .b(in8),
       .c(in9),
