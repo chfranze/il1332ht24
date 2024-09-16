@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------------------
-// Module: nand5_delay
+// Module: nand6_delay
 // Description:
 // Author: Christoffer
 //-----------------------------------------------------------------------------
@@ -7,7 +7,7 @@
 // Outputs:
 //-----------------------------------------------------------------------------
 
-module nand5_delay (
+module nand6_delay (
     input  logic in1,
     input  logic in2,
     input  logic in3,
