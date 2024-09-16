@@ -12,4 +12,3 @@ vsim work.cla_8bit_tb
 add wave /*
 
 run -all
-

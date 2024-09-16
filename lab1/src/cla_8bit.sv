@@ -3,12 +3,8 @@ module cla_8bit (
     input  logic [7:0] b,
     output logic [8:0] sum
 );
-  //TODO: Complete the code
-
   logic [7:0] p, g; // Propagate and Generate
   logic [8:0] c; // Carry
-
-  
 
   // Propagate Logic
   genvar i;
@@ -67,22 +63,22 @@ module cla_8bit (
   carry_logic_1 cl1 (.p0(p[0]), .g0(g[0]), .p1(p[1]), .g1(g[1]), .carry_in0(1'b0), .carry_out(c[2]));
 
   //Slice 3
-  carry_logic_2 cl2 (.p0(p[0]), .g0(g[0]), .p1(p[1]), .g1(g[1]), .p1(p[2]), .g1(g[2]), .carry_in0(1'b0), .carry_out(c[3]));
+  carry_logic_2 cl2 (.p0(p[0]), .g0(g[0]), .p1(p[1]), .g1(g[1]), .p2(p[2]), .g2(g[2]), .carry_in0(1'b0), .carry_out(c[3]));
 
   //Slice 4
-  carry_logic_3 cl3 (.p0(p[0]), .g0(g[0]), .p1(p[1]), .g1(g[1]), .p1(p[2]), .g1(g[2]), .p1(p[3]), .g1(g[3]), .carry_in0(1'b0), .carry_out(c[4]));
+  carry_logic_3 cl3 (.p0(p[0]), .g0(g[0]), .p1(p[1]), .g1(g[1]), .p2(p[2]), .g2(g[2]), .p3(p[3]), .g3(g[3]), .carry_in0(1'b0), .carry_out(c[4]));
 
   //Slice 5
-  carry_logic_4 cl4 (.p0(p[0]), .g0(g[0]), .p1(p[1]), .g1(g[1]), .p1(p[2]), .g1(g[2]), .p1(p[3]), .g1(g[3]), .p1(p[4]), .g1(g[4]), .carry_in0(1'b0), .carry_out(c[5]));
+  carry_logic_4 cl4 (.p0(p[0]), .g0(g[0]), .p1(p[1]), .g1(g[1]), .p2(p[2]), .g2(g[2]), .p3(p[3]), .g3(g[3]), .p4(p[4]), .g4(g[4]), .carry_in0(1'b0), .carry_out(c[5]));
 
   //Slice 6
-  carry_logic_5 cl5 (.p0(p[0]), .g0(g[0]), .p1(p[1]), .g1(g[1]), .p1(p[2]), .g1(g[2]), .p1(p[3]), .g1(g[3]), .p1(p[4]), .g1(g[4]), .p1(p[5]), .g1(g[5]), .carry_in0(1'b0), .carry_out(c[6]));
+  carry_logic_5 cl5 (.p0(p[0]), .g0(g[0]), .p1(p[1]), .g1(g[1]), .p2(p[2]), .g2(g[2]), .p3(p[3]), .g3(g[3]), .p4(p[4]), .g4(g[4]), .p5(p[5]), .g5(g[5]), .carry_in0(1'b0), .carry_out(c[6]));
 
   //Slice 7
-  carry_logic_6 cl6 (.p0(p[0]), .g0(g[0]), .p1(p[1]), .g1(g[1]), .p1(p[2]), .g1(g[2]), .p1(p[3]), .g1(g[3]), .p1(p[4]), .g1(g[4]), .p1(p[5]), .g1(g[5]), .p1(p[6]), .g1(g[6]), .carry_in0(1'b0), .carry_out(c[7]));
+  carry_logic_6 cl6 (.p0(p[0]), .g0(g[0]), .p1(p[1]), .g1(g[1]), .p2(p[2]), .g2(g[2]), .p3(p[3]), .g3(g[3]), .p4(p[4]), .g4(g[4]), .p5(p[5]), .g5(g[5]), .p6(p[6]), .g6(g[6]), .carry_in0(1'b0), .carry_out(c[7]));
 
   // Slice 8 implements sign extension
-  carry_logic_7 cl7 (.p0(p[0]), .g0(g[0]), .p1(p[1]), .g1(g[1]), .p1(p[2]), .g1(g[2]), .p1(p[3]), .g1(g[3]), .p1(p[4]), .g1(g[4]), .p1(p[5]), .g1(g[5]), .p1(p[6]), .g1(g[6]), .p1(p[7]), .g1(g[7]), .carry_in0(1'b0), .carry_out(c[8]));
+  carry_logic_7 cl7 (.p0(p[0]), .g0(g[0]), .p1(p[1]), .g1(g[1]), .p2(p[2]), .g2(g[2]), .p3(p[3]), .g3(g[3]), .p4(p[4]), .g4(g[4]), .p5(p[5]), .g5(g[5]), .p6(p[6]), .g6(g[6]), .p7(p[7]), .g7(g[7]), .carry_in0(1'b0), .carry_out(c[8]));
 
 
 endmodule

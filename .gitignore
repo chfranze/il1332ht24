@@ -12,3 +12,10 @@ lab1/vsim.wlf
 lab1/work/_lib1_9.qdb
 lab1/work/_lib1_9.qpg
 lab1/work/_lib1_9.qtl
+work/_vmake
+lab1/work/_lib1_2.qdb
+lab1/work/_lib1_2.qpg
+work/_lib1_0.qdb
+work/_lib.qdb
+work/*
+lab1/work/*
