@@ -16,7 +16,7 @@ module generate_logic (
     logic nand1_out;
 
 nand2_delay u1 (
-    .a(b),
+    .a(a),
     .b(b),
     .y(nand1_out)
 );
