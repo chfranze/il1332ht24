@@ -12,7 +12,7 @@ module cla_8bit (
   generate
     for (i=0; i < 8; i++)
       begin : generate_PL
-        propagate_logic pl (.a(a[i]), .b(a[i]), .p(P[i]));
+        propagate_logic pl (.a(a[i]), .b(b[i]), .p(P[i]));
       end
   endgenerate
 
