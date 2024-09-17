@@ -20,8 +20,8 @@ module carry_logic_5 (
     input  logic g4,
     input  logic p5,
     input  logic g5,
-    input  logic carry_in0,
-    output logic carry_out
+    input  logic carry_in4,
+    output logic carry_out5
 );
 
     logic nand1_out;
@@ -85,7 +85,7 @@ nand7_delay u7 (
     .in4(p2),
     .in5(p1),
     .in6(p0),
-    .in7(carry_in0),
+    .in7(carry_in4),
     .out(nand7_out)
 );
 
@@ -97,7 +97,7 @@ nand7_delay u8 (
   .in5(nand5_out),
   .in6(nand6_out),
   .in7(nand7_out),
-  .out(carry_out)
+  .out(carry_out5)
 );
 
 endmodule

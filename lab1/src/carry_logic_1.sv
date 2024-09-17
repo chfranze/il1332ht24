@@ -13,7 +13,7 @@ module carry_logic_1 (
     input  logic p1,
     input  logic g1,
     input  logic carry_in0,
-    output logic carry_out
+    output logic carry_out1
 );
 
     logic nand1_out;
@@ -43,7 +43,7 @@ nand3_delay u4 (
   .a(nand1_out),
   .b(nand2_out),
   .c(nand3_out),
-  .y(carry_out)
+  .y(carry_out1)
 );
 
 endmodule
