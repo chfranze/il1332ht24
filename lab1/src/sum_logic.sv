@@ -11,7 +11,7 @@
 module sum_logic (
     input  logic a,
     input  logic b,
-    output logic carry_in,
+    input  logic carry_in,
     output logic sum
 );
 
