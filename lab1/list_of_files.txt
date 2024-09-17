@@ -19,3 +19,6 @@
 ./src/propagate_logic.sv
 ./src/sum_logic.sv
 ./src/xor2_delay.sv
+./src/mux2to1_Nbit.sv
+./src/mux2to1_slice.sv
+./src/cla_8bit_ovf_uvf.sv
