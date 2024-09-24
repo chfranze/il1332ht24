@@ -28,7 +28,7 @@ module mult_mnbit #(
   // Adder logic
   assign Prod[0] = prod_terms[0][0];
   assign A0[N-1] = 1'b0;
-  assign A0[N-2:0] = prod_terms[0][N-1:1];  // a3b0 a2b0 a1b0
+  assign A0[N-2:0] = prod_terms[0][N-1:1];  // a4b0 a3b0 a2b0 a1b0
   assign B0 = prod_terms[1];  // a3b1 a2b1 a1b1 a0b1
 
   rca_nbit #(N) u1 (
@@ -65,7 +65,7 @@ module mult_mnbit #(
       .cout(co2)
   );
 
-  assign Prod[N+2:3] = Sum2;
+  assign Prod[M+N-2:3] = Sum2;
   assign Prod[M+N-1]   = co2;
 
 endmodule

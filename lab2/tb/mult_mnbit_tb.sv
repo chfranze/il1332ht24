@@ -1,6 +1,6 @@
 module mult_mnbit_tb #(
     parameter M = 5,
-    parameter N = 5
+    parameter N = 4
 ) ();
 
 logic [M-1:0] a;            // End with a semicolon instead of a comma
@@ -34,7 +34,12 @@ mult_mnbit #(M, N) dut (
     a = 5;
     b = 5;
     #30;
-    
+    a = 10;
+    b = 3;
+    #30;
+    a = 10;
+    b = -3;
+    #30;
     $finish;
   end
 endmodule
