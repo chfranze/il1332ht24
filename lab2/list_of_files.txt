@@ -1,10 +1,8 @@
 ./src/rca_nbit.sv
 ./src/full_adder_structural_half_adder_nand.sv
 ./src/half_adder.sv
-./src/mult_add.sv
 ./src/mult_mnbit.sv
 ./src/nand2.sv
-./src/rca_4bit_signed.sv
 ./src/rca_nbit.sv
 ./src/shifter_rotater.sv
 ./src/xor2.sv
