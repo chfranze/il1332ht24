@@ -37,8 +37,8 @@ mult_mnbit #(M, N) dut (
     a = 10;
     b = 3;
     #30;
-    a = 10;
-    b = -3;
+    a = -3;
+    b = 5;
     #30;
     $finish;
   end

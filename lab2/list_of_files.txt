@@ -7,3 +7,5 @@
 ./src/shifter_rotater.sv
 ./src/xor2.sv
 ./src/and2.sv
+./src/mux2to1_Nbit.sv
+./src/mux2to1_slice.sv
