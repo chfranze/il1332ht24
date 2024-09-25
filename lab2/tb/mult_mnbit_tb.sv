@@ -9,9 +9,9 @@ logic [M+N-1:0] Prod;       // End with a semicolon
 
 // Instantiate the mult_mnbit module
 mult_mnbit #(M, N) dut (
-    .a(a),
-    .b(b),
-    .Prod(Prod)
+    (a),
+    (b),
+    (Prod)
 );
 
   initial begin
@@ -38,6 +38,9 @@ mult_mnbit #(M, N) dut (
     b = 3;
     #30;
     a = -3;
+    b = 5;
+    #30;
+    a = -1;
     b = 5;
     #30;
     $finish;
