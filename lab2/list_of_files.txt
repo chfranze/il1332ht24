@@ -16,8 +16,10 @@
 ./src/right_rotate.sv
 ./src/right_shifter.sv
 ./src/shifter_rotater.sv
+./src/twos_complement_inverter.sv
 ./src/xor2.sv
 ./tb/mult_mnbit_tb.sv
 ./tb/tb_rca_nbit_mux.sv
 ./tb/tb_rca_nbit.sv
 ./tb/tb_shifter_rotater.sv
+./tb/tb_twos_complement_inverter.sv
