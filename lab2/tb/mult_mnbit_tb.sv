@@ -1,5 +1,5 @@
 module mult_mnbit_tb #(
-    parameter M = 5,
+    parameter M = 7,
     parameter N = 4
 ) ();
 
@@ -42,6 +42,12 @@ mult_mnbit #(M, N) dut (
     #30;
     a = -1;
     b = 5;
+    #30;
+    a = -2;
+    b = -3;
+    #30;
+    a = 4;
+    b = -3;
     #30;
     $finish;
   end
