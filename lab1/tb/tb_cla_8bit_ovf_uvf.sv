@@ -35,7 +35,7 @@ module tb_cla_8bit_ovf_uvf;
     #30;    
     test_case(8'b01111110, 8'b00011001, 8'b10000000, 1'b1, 1'b0); // Overflow
     #30;
-    test_case(8'b10000000, 8'b10000000, 8'b00000000, 1'b0, 1'b1); // Underflow
+    test_case(8'b10000001, 8'b10001100, 8'b00000000, 1'b0, 1'b1); // Underflow
     #30;
     test_case(8'b11111111, 8'b00000001, 8'b00000000, 1'b0, 1'b1); // Underflow
     #30;

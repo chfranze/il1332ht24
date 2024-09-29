@@ -29,3 +29,6 @@ lab1/wlft*
 lab2/work
 lab2/vsim.wlf
 lab2/vsim.wlf
+lab3/work/*
+lab1/vish_stacktrace.vstf
+lab3/vsim.wlf
