@@ -5,9 +5,9 @@ close $fp
 foreach file $files {
 	vlog -sv $file
 }
-vlog -sv ./tb/mult_mnbit_tb.sv
+vlog -sv ./tb/tb_alu.sv
 
-vsim work.mult_mnbit_tb
+vsim work.tb_alu
 
 add wave /*
 

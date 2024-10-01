@@ -75,7 +75,7 @@ module arithmetic_alu(
 
 
 
-    Select MUX
+    //Select MUX
     mux4to1_N_bit #(16) M1(
         .A(add_out),
         .B(sub_out),
