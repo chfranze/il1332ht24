@@ -36,7 +36,7 @@ module alu (
 
   // Shift/Rotate
 
-  shifter_rotator sr (
+  shifter_rotator_alu sr (
       .x(),
       .select(),
       .y()
