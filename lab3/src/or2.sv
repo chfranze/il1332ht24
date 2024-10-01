@@ -1,4 +1,4 @@
-module nand2_delay ( 
+module or2 ( 
 	input logic a,   // First input 
 	input logic b,   // Second input 
 	output logic y   // Output 

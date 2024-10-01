@@ -5,10 +5,11 @@ module logic_alu (
     output logic [7:0] z
 );
 
-  logic [15:0] mux_out;
+  logic [7:0] mux_out;
   logic [7:0] and_out;
   logic [7:0] or_out;
   logic [7:0] not_out;
+  logic [7:0] xor_out;
 
 
 
@@ -23,7 +24,7 @@ module logic_alu (
     end
   endgenerate
 
-  genvar i;
+  // genvar i;
   generate
     for (i = 0; i < 8; i++) begin : gen_or2
       or2 or_slice (
@@ -34,7 +35,7 @@ module logic_alu (
     end
   endgenerate
 
-  genvar i;
+  // genvar i;
   generate
     for (i = 0; i < 8; i++) begin : gen_xor2
       xor2_delay xor_slice (
@@ -45,7 +46,7 @@ module logic_alu (
     end
   endgenerate
 
-genvar i;
+// genvar i;
   generate
     for (i = 0; i < 8; i++) begin : gen_not
       nand2_delay xor_slice (

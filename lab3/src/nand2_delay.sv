@@ -1,4 +1,3 @@
-`timescale 1ns / 1ps
 
 module nand2_delay ( 
 	input logic a,   // First input 
@@ -7,6 +6,6 @@ module nand2_delay (
 	); 
 
 // Continuous assignment for NAND gate 
-    assign #1ns y = ~(a & b);  // Perform the NAND operation after the delay
+    assign y = ~(a & b);  // Perform the NAND operation after the delay
 	
 endmodule
