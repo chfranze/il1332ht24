@@ -1,48 +1,65 @@
 module tb_barrel_shifter;
 
-    logic [2:0] s;           // Control signals
-    logic [7:0] x;           // Input data
-    logic left_in;           // Left shift input
-    logic right_in;          // Right shift input
-    logic [7:0] y;           // Output data
+    // Input and output declarations
+    logic [7:0] x;         // 8-bit input
+    logic [2:0] s;         // Shift amount (for rotate operations)
+    logic [1:0] shift_mode; // Control signals to define the type of shift (00: no shift, 01: right shift, 10: left shift, 11: rotate)
+    logic [7:0] y;         // 8-bit output
 
-    // Instantiate the barrel shifter
+    // Instantiate the module (assuming the logic for all shifts is implemented)
     barrel_shifter uut (
-        .s(s),
         .x(x),
-        .left_in(left_in),
-        .right_in(right_in),
+        .s(s),
+        .shift_mode(shift_mode),
         .y(y)
     );
 
+    // Test all operations
     initial begin
-        // Test No Shift
-        s = 3'b000; x = 8'b10101010; left_in = 1'b0; right_in = 1'b0;
+        // Test case 1: No shift
+        x = 8'b11010101; s = 3'b000; shift_mode = 2'b00; // No shift
+        #10;
+        
+        // Test case 2: Right shift by 1 bit
+        x = 8'b11010101; s = 3'b001; shift_mode = 2'b01; // Right shift by 1 bit
         #10;
 
-        // Test Left Shift
-        s = 3'b100; x = 8'b10101010; left_in = 1'b1;
+        // Test case 3: Right shift by 2 bits
+        x = 8'b11010101; s = 3'b010; shift_mode = 2'b01; // Right shift by 2 bits
         #10;
 
-        // Test Right Shift
-        s = 3'b110; x = 8'b10101010; right_in = 1'b1;
+        // Test case 4: Left shift by 1 bit
+        x = 8'b11010101; s = 3'b001; shift_mode = 2'b10; // Left shift by 1 bit
         #10;
 
-        // Test Left Rotate
-        s = 3'b101; x = 8'b10101010;
+        // Test case 5: Left shift by 2 bits
+        x = 8'b11010101; s = 3'b010; shift_mode = 2'b10; // Left shift by 2 bits
         #10;
 
-        // Test Right Rotate
-        s = 3'b111; x = 8'b10101010;
+        // Test case 6: Right rotate by 1 bit
+        x = 8'b11010101; s = 3'b001; shift_mode = 2'b11; // Right rotate by 1 bit
         #10;
 
-        // Finish simulation
+        // Test case 7: Right rotate by 3 bits
+        x = 8'b11010101; s = 3'b011; shift_mode = 2'b11; // Right rotate by 3 bits
+        #10;
+
+        // Test case 8: Left rotate by 1 bit (same as right rotate by 7 bits)
+        x = 8'b11010101; s = 3'b001; shift_mode = 2'b11; // Left rotate by 1 bit
+        #10;
+
+        // Test case 9: Left rotate by 3 bits (same as right rotate by 5 bits)
+        x = 8'b11010101; s = 3'b011; shift_mode = 2'b11; // Left rotate by 3 bits
+        #10;
+
+        // End simulation
         $finish;
     end
 
+    // Monitor the values to see changes in the waveforms
     initial begin
-        // Monitor the output
-        $monitor("Time: %0t | s = %b | x = %b | y = %b", $time, s, x, y);
+        $monitor("Time: %0t | x = %b | shift_mode = %b | s = %b | y = %b", 
+            $time, x, shift_mode, s, y);
     end
 
 endmodule
