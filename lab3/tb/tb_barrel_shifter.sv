@@ -21,7 +21,7 @@ module tb_barrel_shifter;
         #10;
         
         // Test case 2: Right shift by 1 bit
-        x = 8'b11010101; s = 3'b001; shift_mode = 2'b01; // Right shift by 1 bit
+        x = 8'b11010101; s = 3'b101; shift_mode = 2'b01; // Right shift by 1 bit
         #10;
 
         // Test case 3: Right shift by 2 bits
