@@ -34,3 +34,4 @@
 ./tb/tb_compare_alu.sv
 ./tb/tb_demux.sv
 ./tb/tb_logic_alu.sv
+./src/barrel_shifter.sv
