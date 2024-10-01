@@ -6,12 +6,12 @@ module alu (
     output logic [15:0] z
 );
 
-  logic [7:0][3:0] x_demux_out;
-  logic [7:0][3:0] y_demux_out;
+  logic [3:0][7:0] x_demux_out;
+  logic [3:0][7:0] y_demux_out;
 
   logic [15:0] arithmetic_mux_out;
   logic [7:0] shiftRotate_mux_out;
-  logic [7:0] compare_mux_out;
+  logic compare_mux_out;
   logic [7:0] logic_mux_out;
 
   demux4to1_N_bit #(8) x_input_demux (
@@ -34,23 +34,63 @@ module alu (
 
   // Arithmetic
 
+  arithmetic_alu aa (
+    .x(x_demux_out[0]),
+    .y(y_demux_out[0]),
+    .m(m),
+    .z(arithmetic_mux_out)
+  );
+
   // Shift/Rotate
 
-  shifter_rotator_alu sr (
-      .x(),
-      .select(),
-      .y()
-  );
+  // shifter_rotator_alu sra (
+  //   .x(x_demux_out[1]),
+  //   .y(y_demux_out[1]),
+  //   .select(m),
+  //   .z(shiftRotate_mux_out)
+  // );
 
   logic [15:0] shiftRotate_mux_out_16bit;
 
+  // Add padding
+  zero_pad #(8, 16) za1 (
+    .in(shiftRotate_mux_out),
+    .out(shiftRotate_mux_out_16bit)
+  );
+
   // Compare
+
+  compare_alu ca (
+    .x(x_demux_out[2]),
+    .y(y_demux_out[2]),
+    .m(m),
+    .z(compare_mux_out)
+  );
 
   logic [15:0] compare_mux_out_16bit;
 
+  // Add padding
+  zero_pad #(1, 16) za2 (
+    .in(compare_mux_out),
+    .out(compare_mux_out_16bit)
+  );
+
   // Logic
 
+  logic_alu la (
+    .x(x_demux_out[3]),
+    .y(y_demux_out[3]),
+    .m(m),
+    .z(logic_mux_out)
+  );
+
   logic [15:0] logic_mux_out_16bit;
+
+  // Add padding
+  zero_pad #(8, 16) za3 (
+    .in(logic_mux_out),
+    .out(logic_mux_out_16bit)
+  );
 
   // Output mux
 

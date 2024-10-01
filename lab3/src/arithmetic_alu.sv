@@ -53,12 +53,12 @@ module arithmetic_alu(
     //     .Prod(mul_out)      // Directly assign the 16-bit product
     // );
 
-    logic mul_out [17:0];
-    logic mul_x [8:0];
-    logic mul_y [8:0];
+    logic [17:0] mul_out;
+    logic [8:0] mul_x;
+    logic [8:0] mul_y;
 
-    assign mul_x[7:0] = x;
-    assign mul_y[7:0] = y;
+    assign mul_x[7:0] = x[7:0];
+    assign mul_y[7:0] = y[7:0];
     assign mul_x[8] = 1'b0;
     assign mul_y[8] = 1'b0;
 
@@ -69,13 +69,13 @@ module arithmetic_alu(
     (mul_out)
 );
 
-    logic mul_done [15:0];
+    logic [15:0] mul_done;
 
     assign mul_done[15:0] = mul_out[15:0];
 
 
 
-    // Select MUX
+    //Select MUX
     mux4to1_N_bit #(16) M1(
         .A(add_out),
         .B(sub_out),
