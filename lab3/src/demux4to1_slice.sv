@@ -27,27 +27,29 @@ module demux4to1_slice (
   and3_delay U1 (
       .a(y),
       .b(s1_inv),
-      .c(s0_inv)
+      .c(s0_inv),
+      .y(a)
   );
 
   and3_delay U2 (
       .a(y),
       .b(s1_inv),
-      .c(s0)
+      .c(s0),
+      .y(b)
   );
 
   and3_delay U3 (
       .a(y),
       .b(s1),
-      .c(s0_inv)
+      .c(s0_inv),
+      .y(c)
   );
 
   and3_delay U4 (
       .a(y),
       .b(s1),
-      .c(s0)
+      .c(s0),
+      .y(d)
   );
-
-
 
 endmodule
