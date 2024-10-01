@@ -23,26 +23,29 @@ module tb_demux4to1_N_bit();
   // Initial block for stimulus
   initial begin
     // Initialize signals
-    Y = 4'b0000;
+    Y = 4'b0001;
     sel = 2'b00;
-    #10;  // Initial delay
+    #30;  // Initial delay
     
     // Test Case 1: sel = 00
     Y = 4'b1010;  // Example input value
     sel = 2'b00;  // Select output A
-    #10;  // Wait for delay
+    #30;  // Wait for delay
     
     // Test Case 2: sel = 01
+    Y = 4'b1110;  // Example input value
     sel = 2'b01;  // Select output B
-    #10;  // Wait for delay
+    #30;  // Wait for delay
     
     // Test Case 3: sel = 10
+    Y = 4'b1111;  // Example input value
     sel = 2'b10;  // Select output C
-    #10;  // Wait for delay
+    #30;  // Wait for delay
     
     // Test Case 4: sel = 11
+    Y = 4'b0111;  // Example input value
     sel = 2'b11;  // Select output D
-    #10;  // Wait for delay
+    #30;  // Wait for delay
 
     // Add more test cases as needed
 
