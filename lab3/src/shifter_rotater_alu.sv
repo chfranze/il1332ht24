@@ -1,4 +1,4 @@
-module shifter_rotator(
+module shifter_rotator_alu(
 	input logic[3:0] x,
 	input logic[1:0] select,
 	output logic[3:0] y
