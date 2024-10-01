@@ -46,7 +46,7 @@ module comparator_slice (
   );
   nand3_delay u3 (
       .a(a0),
-      .b(a0),
+      .b(a1),
       .c(b0_inv),
       .y(u3_out)
   );
