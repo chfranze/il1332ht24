@@ -52,10 +52,10 @@ module alu (
 
   shift_rotate_alu sra (
     .x(x_demux_out[1]),
-    .s(y_demux_out[1]),
-    .shift_mode(m),
-    .y(shiftRotate_mux_out)
-  )
+    .y(y_demux_out[1]),
+    .m(m),
+    .z(shiftRotate_mux_out)
+  );
 
   logic [15:0] shiftRotate_mux_out_16bit;
 

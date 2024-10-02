@@ -35,3 +35,4 @@
 ./tb/tb_demux.sv
 ./tb/tb_logic_alu.sv
 ./src/barrel_shifter.sv
+./src/shift_rotate_alu.sv
