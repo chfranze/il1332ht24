@@ -43,12 +43,19 @@ module alu (
 
   // Shift/Rotate
 
-  barrel_shifter sra (
+  // barrel_shifter sra (
+  //   .x(x_demux_out[1]),
+  //   .s(y_demux_out[1][2:0]),  // TODO: Fix so it can take all 8bits
+  //   .shift_mode(m),
+  //   .y(shiftRotate_mux_out)
+  // );
+
+  shift_rotate_alu sra (
     .x(x_demux_out[1]),
-    .s(y_demux_out[1][2:0]),  // TODO: Fix so it can take all 8bits
+    .s(y_demux_out[1]),
     .shift_mode(m),
     .y(shiftRotate_mux_out)
-  );
+  )
 
   logic [15:0] shiftRotate_mux_out_16bit;
 
