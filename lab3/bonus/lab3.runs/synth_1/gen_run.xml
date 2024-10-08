@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1728389185" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/urbana_top.dcp">
+  <File Type="PA-TCL" Name="urbana_top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="urbana_top_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="urbana_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="urbana_top.vds"/>
+  <File Type="RDS-UTIL" Name="urbana_top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="urbana_top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="urbana_top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="urbana_top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="urbana_top_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/src/alu.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/alu.sv"/>
+        <Attr Name="ImportTime" Val="1728378788"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/and2_delay.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/and2_delay.sv"/>
+        <Attr Name="ImportTime" Val="1727774292"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/and3_delay.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/and3_delay.sv"/>
+        <Attr Name="ImportTime" Val="1727772394"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/arithmetic_alu.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/arithmetic_alu.sv"/>
+        <Attr Name="ImportTime" Val="1727856801"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/bcd27s.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/il2234-lab-demo-master/rtl/bcd27s.sv"/>
+        <Attr Name="ImportTime" Val="1726754570"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/clock_divider.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/il2234-lab-demo-master/rtl/clock_divider.sv"/>
+        <Attr Name="ImportTime" Val="1726754570"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/comparator_Nbit.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/comparator_Nbit.sv"/>
+        <Attr Name="ImportTime" Val="1727789374"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/comparator_log_4bit.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/comparator_log_4bit.sv"/>
+        <Attr Name="ImportTime" Val="1727771827"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/comparator_slice.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/comparator_slice.sv"/>
+        <Attr Name="ImportTime" Val="1727794571"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/compare_alu.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/compare_alu.sv"/>
+        <Attr Name="ImportTime" Val="1727790658"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/configurable_clock_divider.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/il2234-lab-demo-master/rtl/configurable_clock_divider.sv"/>
+        <Attr Name="ImportTime" Val="1726754570"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/demux4to1_N_bit.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/demux4to1_N_bit.sv"/>
+        <Attr Name="ImportTime" Val="1727772394"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/demux4to1_slice.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/demux4to1_slice.sv"/>
+        <Attr Name="ImportTime" Val="1727776791"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/full_adder_structural_half_adder_nand.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/full_adder_structural_half_adder_nand.sv"/>
+        <Attr Name="ImportTime" Val="1727794571"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/half_adder.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/half_adder.sv"/>
+        <Attr Name="ImportTime" Val="1727794571"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/kw4281_driver.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/il2234-lab-demo-master/rtl/kw4281_driver.sv"/>
+        <Attr Name="ImportTime" Val="1726754570"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/left_rotate.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/left_rotate.sv"/>
+        <Attr Name="ImportTime" Val="1727776791"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/left_shifter.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/left_shifter.sv"/>
+        <Attr Name="ImportTime" Val="1727793877"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/logic_alu.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/logic_alu.sv"/>
+        <Attr Name="ImportTime" Val="1727793891"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/mult_mnbit.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/mult_mnbit.sv"/>
+        <Attr Name="ImportTime" Val="1727799238"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/mux2to1_Nbit.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/mux2to1_Nbit.sv"/>
+        <Attr Name="ImportTime" Val="1727771826"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/mux2to1_slice.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/mux2to1_slice.sv"/>
+        <Attr Name="ImportTime" Val="1727799297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/mux4to1_N_bit.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/mux4to1_N_bit.sv"/>
+        <Attr Name="ImportTime" Val="1727771827"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/mux4to1_slice.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/mux4to1_slice.sv"/>
+        <Attr Name="ImportTime" Val="1727771827"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/nand2_delay.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/nand2_delay.sv"/>
+        <Attr Name="ImportTime" Val="1727793736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/nand3_delay.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/nand3_delay.sv"/>
+        <Attr Name="ImportTime" Val="1727793744"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/nand4_delay.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/nand4_delay.sv"/>
+        <Attr Name="ImportTime" Val="1727793751"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/or2.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/or2.sv"/>
+        <Attr Name="ImportTime" Val="1727791275"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/rca_nbit.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/rca_nbit.sv"/>
+        <Attr Name="ImportTime" Val="1727776791"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/registers.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/il2234-lab-demo-master/rtl/registers.sv"/>
+        <Attr Name="ImportTime" Val="1726754570"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/right_rotate.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/right_rotate.sv"/>
+        <Attr Name="ImportTime" Val="1727776791"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/right_shifter.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/right_shifter.sv"/>
+        <Attr Name="ImportTime" Val="1727776791"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/shift_rotate_alu.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/shift_rotate_alu.sv"/>
+        <Attr Name="ImportTime" Val="1728378788"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/shifter_rotater_alu.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/shifter_rotater_alu.sv"/>
+        <Attr Name="ImportTime" Val="1727776791"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/twos_complement_inverter.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/twos_complement_inverter.sv"/>
+        <Attr Name="ImportTime" Val="1727794571"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/xor2_delay.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/xor2_delay.sv"/>
+        <Attr Name="ImportTime" Val="1727775314"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/zero_pad.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/zero_pad.sv"/>
+        <Attr Name="ImportTime" Val="1727772394"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/urbana_top.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/il2234-lab-demo-master/rtl/urbana_top.sv"/>
+        <Attr Name="ImportTime" Val="1726754570"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="urbana_top"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/il1332ht24/urbana.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../urbana.xdc"/>
+        <Attr Name="ImportTime" Val="1728384542"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/urbana_top.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
