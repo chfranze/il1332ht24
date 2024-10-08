@@ -1,20 +1,20 @@
 module alu (
-    input  logic [ 7:0] x,
-    input  logic [ 7:0] y,
+    input  logic [ 3:0] x,
+    input  logic [ 3:0] y,
     input  logic [ 1:0] m,
     input  logic [ 1:0] s,
-    output logic [15:0] z
+    output logic [7:0] z
 );
 
-  logic [3:0][7:0] x_demux_out;
-  logic [3:0][7:0] y_demux_out;
+  logic [3:0][3:0] x_demux_out;
+  logic [3:0][3:0] y_demux_out;
 
-  logic [15:0] arithmetic_mux_out;
-  logic [7:0] shiftRotate_mux_out;
+  logic [7:0] arithmetic_mux_out;
+  logic [3:0] shiftRotate_mux_out;
   logic compare_mux_out;
-  logic [7:0] logic_mux_out;
+  logic [3:0] logic_mux_out;
 
-  demux4to1_N_bit #(8) x_input_demux (
+  demux4to1_N_bit #(4) x_input_demux (
       .Y  (x),
       .sel(s),
       .A  (x_demux_out[0]),  // Arithmetic
@@ -23,7 +23,7 @@ module alu (
       .D  (x_demux_out[3])   // Logic
   );
 
-  demux4to1_N_bit #(8) y_input_demux (
+  demux4to1_N_bit #(4) y_input_demux (
       .Y  (y),
       .sel(s),
       .A  (y_demux_out[0]),  // Arithmetic
@@ -43,13 +43,6 @@ module alu (
 
   // Shift/Rotate
 
-  // barrel_shifter sra (
-  //   .x(x_demux_out[1]),
-  //   .s(y_demux_out[1][2:0]),  // TODO: Fix so it can take all 8bits
-  //   .shift_mode(m),
-  //   .y(shiftRotate_mux_out)
-  // );
-
   shift_rotate_alu sra (
     .x(x_demux_out[1]),
     .y(y_demux_out[1]),
@@ -57,12 +50,12 @@ module alu (
     .z(shiftRotate_mux_out)
   );
 
-  logic [15:0] shiftRotate_mux_out_16bit;
+  logic [7:0] shiftRotate_mux_out_8bit;
 
   // Add padding
-  zero_pad #(8, 16) za1 (
+  zero_pad #(4, 8) za1 (
     .in(shiftRotate_mux_out),
-    .out(shiftRotate_mux_out_16bit)
+    .out(shiftRotate_mux_out_8bit)
   );
 
   // Compare
@@ -74,12 +67,12 @@ module alu (
     .z(compare_mux_out)
   );
 
-  logic [15:0] compare_mux_out_16bit;
+  logic [7:0] compare_mux_out_8bit;
 
   // Add padding
-  zero_pad #(1, 16) za2 (
+  zero_pad #(1, 8) za2 (
     .in(compare_mux_out),
-    .out(compare_mux_out_16bit)
+    .out(compare_mux_out_8bit)
   );
 
   // Logic
@@ -91,21 +84,21 @@ module alu (
     .z(logic_mux_out)
   );
 
-  logic [15:0] logic_mux_out_16bit;
+  logic [7:0] logic_mux_out_8bit;
 
   // Add padding
-  zero_pad #(8, 16) za3 (
+  zero_pad #(4, 8) za3 (
     .in(logic_mux_out),
-    .out(logic_mux_out_16bit)
+    .out(logic_mux_out_8bit)
   );
 
   // Output mux
 
-  mux4to1_N_bit #(16) output_mux (
+  mux4to1_N_bit #(8) output_mux (
       .A  (arithmetic_mux_out),
-      .B  (shiftRotate_mux_out_16bit),
-      .C  (compare_mux_out_16bit),
-      .D  (logic_mux_out_16bit),
+      .B  (shiftRotate_mux_out_8bit),
+      .C  (compare_mux_out_8bit),
+      .D  (logic_mux_out_8bit),
       .sel(s),
       .Y  (z)
   );
