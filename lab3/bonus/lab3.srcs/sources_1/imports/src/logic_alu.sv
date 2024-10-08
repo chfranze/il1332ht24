@@ -1,21 +1,21 @@
 module logic_alu (
-    input  logic [ 7:0] x,
-    input  logic [ 7:0] y,
+    input  logic [ 3:0] x,
+    input  logic [ 3:0] y,
     input  logic [ 1:0] m,
-    output logic [7:0] z
+    output logic [3:0] z
 );
 
-  logic [7:0] mux_out;
-  logic [7:0] and_out;
-  logic [7:0] or_out;
-  logic [7:0] not_out;
-  logic [7:0] xor_out;
+  logic [3:0] mux_out;
+  logic [3:0] and_out;
+  logic [3:0] or_out;
+  logic [3:0] not_out;
+  logic [3:0] xor_out;
 
 
 
   genvar i;
   generate
-    for (i = 0; i < 8; i++) begin : gen_and2
+    for (i = 0; i < 4; i++) begin : gen_and2
       and2_delay and_slice (
           x[i],
           y[i],
@@ -26,7 +26,7 @@ module logic_alu (
 
   // genvar i;
   generate
-    for (i = 0; i < 8; i++) begin : gen_or2
+    for (i = 0; i < 4; i++) begin : gen_or2
       or2 or_slice (
           x[i],
           y[i],
@@ -37,7 +37,7 @@ module logic_alu (
 
   // genvar i;
   generate
-    for (i = 0; i < 8; i++) begin : gen_xor2
+    for (i = 0; i < 4; i++) begin : gen_xor2
       xor2_delay xor_slice (
           x[i],
           y[i],
@@ -48,7 +48,7 @@ module logic_alu (
 
 // genvar i;
   generate
-    for (i = 0; i < 8; i++) begin : gen_not
+    for (i = 0; i < 4; i++) begin : gen_not
       nand2_delay xor_slice (
           x[i],
           x[i],
@@ -59,7 +59,7 @@ module logic_alu (
 
 
 
-  mux4to1_N_bit #(8) mux (
+  mux4to1_N_bit #(4) mux (
       .A  (and_out),
       .B  (or_out),
       .C  (not_out),

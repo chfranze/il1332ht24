@@ -1,6 +1,6 @@
 module compare_alu (
-    input  logic [ 7:0] x,
-    input  logic [ 7:0] y,
+    input  logic [ 3:0] x,
+    input  logic [ 3:0] y,
     input  logic [ 1:0] m,
     output logic z
 );
@@ -11,7 +11,7 @@ module compare_alu (
   logic not_equal;
 
 
-comparator_Nbit #(8) comp (
+comparator_Nbit #(4) comp (
     x,
     y,
     g,
