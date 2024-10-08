@@ -9,12 +9,11 @@ module cla_8bit_ovf_uvf (
   logic [8:0] C;     // Carry
   logic [7:0] sum;   // Sum
 
-  // Overflow: Carry out of MSB indicates overflow for signed numbers
-  assign ovf = (C[7] ^ C[8]);
+  // Overflow
+  assign ovf = (~a[7] & ~b[7]) & sum[7];
 
   // Underflow: Occurs when two negative numbers produce a positive result
-  //assign uvf = (a[7] & b[7] & ~sum[7]);
-  assign uvf = 0;
+  assign uvf = (a[7] & b[7]) & ~sum[7];
 
   logic [7:0] temp_out;
 
@@ -26,7 +25,7 @@ module cla_8bit_ovf_uvf (
     .Y(temp_out)
   );
 
-  mux2to1_Nbit #(8) mu2 ( // Underflow mux
+  mux2to1_Nbit #(8) m2 ( // Underflow mux
       .A(8'b10000000),       // Output from the overflow mux
       .B(temp_out),               // Underflow value
       .s(uvf),               // Select signal for underflow

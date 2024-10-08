@@ -21,7 +21,7 @@ module tb_alu;
     // Test case 1: Arithmetic addition
     x = 8'd10;
     y = 8'd5;
-    m = 2'b00;   // Addition (assuming m controls the arithmetic operation)
+    m = 2'b10;   // Addition (assuming m controls the arithmetic operation)
     s = 2'b00;   // Select Arithmetic ALU
     #10;         // Wait for 10 time units
     $display("Arithmetic add: x = %d, y = %d, z = %d", x, y, z);
