@@ -32,3 +32,6 @@ lab2/vsim.wlf
 lab3/work/*
 lab1/vish_stacktrace.vstf
 lab3/vsim.wlf
+lab4/traffic light/work/*
+lab4/traffic light/work/_lib1_0.qtl
+lab4/traffic light/vsim.wlf
