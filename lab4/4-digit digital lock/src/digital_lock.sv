@@ -1,21 +1,19 @@
-module digital_lock_fsm (
-    input logic clk,
+module digital_lock (
+    input logic clk_100mhz,
     input logic rstn,
-    input logic key,
+    input logic [3:0] key,
     input logic valid_key,
     output logic state
 );
 
-    // // Define state
-    // typedef enum logic [1:0] {
-    //     RED_STATE = 2'b00,
-    //     RED_ORANGE_STATE = 2'b01,
-    //     GREEN_STATE = 2'b10,
-    //     ORANGE_STATE = 2'b11
-    // } state_ty;
+    // Define state
+    typedef enum logic {
+        RELEASED_STATE = 1'b0,
+        PRESSED_STATE = 1'b1
+    } state_ty;
 
-    // // Current and next state registers
-    // state_ty pres_state, next_state;
+    // Current and next state registers
+    state_ty pres_state, next_state;
 
     // // State transition and counter logic
     // always_ff @(posedge clk or negedge rstn) begin
@@ -70,7 +68,5 @@ module digital_lock_fsm (
     //         ORANGE_STATE: orange = 1;
     //     endcase
     // end
-
-    // assign counter_out = counter;  // Expose the internal counter
 
 endmodule
