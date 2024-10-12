@@ -44,25 +44,25 @@ module tb_digital_lock;
 
         // Unlocking sequence using the correct PIN (1234)
         #20;
-        key = 4'h0; // Press 0
+        key = 4'h1; // Press 0
         valid_key = 1;
         #10;
         valid_key = 0;
 
         #20;
-        key = 4'h1; // Press 1
+        key = 4'h2; // Press 1
         valid_key = 1;
         #10;
         valid_key = 0;
 
         #20;
-        key = 4'h2; // Press 2
+        key = 4'h3; // Press 2
         valid_key = 1;
         #10;
         valid_key = 0;
 
         #20;
-        key = 4'h3; // Press 3
+        key = 4'h4; // Press 3
         valid_key = 1;
         #10;
         valid_key = 0;
@@ -104,7 +104,13 @@ module tb_digital_lock;
         #10;
         valid_key = 0;
 
-        // Unlocking with new password (5678)
+        // Lock and unlock with new password (5678)
+        #20;
+        key = 4'hB; // Press B to lock
+        valid_key = 1;
+        #10;
+        valid_key = 0;
+
         #20;
         key = 4'h5; // Press 5
         valid_key = 1;
