@@ -1,0 +1,8 @@
+./src/clk_divider.sv
+./src/d_flop.sv
+./src/digital_lock.sv
+./src/key_press_detector.sv
+./src/register.sv
+./src/sipo_shift_register_hex.sv
+./tb/tb_digital_lock.sv
+./tb/tb_key_press_detector.sv

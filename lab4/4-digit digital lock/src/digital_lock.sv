@@ -87,8 +87,8 @@ module digital_lock (
 
             ENTERING_NEW_PIN: begin
                 if (pin_digit_count == 4) begin  // After entering 4 digits
-                        unlock_pin <= entered_pin; // Update unlock_pin with new PIN
-                        next_state = UNLOCKED;     // Go back to unlocked state
+                    unlock_pin <= entered_pin; // Update unlock_pin with new PIN
+                    next_state = UNLOCKED;     // Go back to unlocked state
                 end
                 else if (valid_key && key == 'hB)  // Press B to lock
                     next_state = LOCKED;
