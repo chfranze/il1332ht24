@@ -7,7 +7,8 @@ module digital_lock (
     output logic [3:0] q0, 
     output logic [3:0] q1, 
     output logic [3:0] q2, 
-    output logic [3:0] q3
+    output logic [3:0] q3,
+    output logic [15:0] unlock_pin
 );
 
     // Define state
@@ -20,12 +21,10 @@ module digital_lock (
     // Current and next state registers
     state_ty pres_state, next_state;
 
-    logic [15:0] unlock_pin = 16'h1234;  // Default PIN '1234'
+    //logic [15:0] unlock_pin = 16'h1234;  // Default PIN '1234'
+    //assign unlock_pin = 16'h1234;
     logic [15:0] entered_pin;            // For storing entered PIN
     logic [2:0]  pin_digit_count;        // Count the number of entered digits during new PIN entry
-
-    // SIPO shift register for entered PIN (shift in 4 digits)
-    //logic [3:0] q0, q1, q2, q3;  // Outputs from the SIPO shift register
 
     // Instantiate the SIPO shift register
     sipo_shift_register_hex shift_reg_inst (
@@ -42,6 +41,7 @@ module digital_lock (
     always_ff @(posedge clk or negedge rstn) begin
         if (!rstn) begin
             pres_state <= UNLOCKED;
+            unlock_pin = 16'h1234;       // Default PIN '1234'
             entered_pin <= 16'b0;        // Clear entered pin
             pin_digit_count <= 2'b00;    // Reset digit counter
         end else begin
@@ -61,6 +61,12 @@ module digital_lock (
             if (pres_state == ENTERING_NEW_PIN && valid_key) begin
                 entered_pin <= {q3, q2, q1, q0}; // Store new entered PIN
                 pin_digit_count <= pin_digit_count + 1'b1; // Increment digit count
+            end
+            
+            // Update unlock_pin when 4 digits are entered
+            if (pres_state == ENTERING_NEW_PIN && pin_digit_count == 4) begin
+                unlock_pin <= entered_pin; // Store new unlock_pin after 4 digits entered
+                pin_digit_count <= 3'b000; // Reset digit counter after PIN update
             end
 
             // Reset counter when switching states
@@ -91,7 +97,6 @@ module digital_lock (
 
             ENTERING_NEW_PIN: begin
                 if (pin_digit_count == 4) begin  // After entering 4 digits
-                    unlock_pin <= entered_pin; // Update unlock_pin with new PIN
                     next_state = UNLOCKED;     // Go back to unlocked state
                 end
             end

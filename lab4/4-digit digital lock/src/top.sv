@@ -9,20 +9,15 @@ module top (
     output logic [3:0] D1_AN, D0_AN
 );
 
-  logic [11:0] counter;
-
-  always_ff @(posedge debounced_valid_key) begin
-        counter <= counter + 12'b1;
-  end
-    
-
   kw4281_driver right_driver (
       .rst_n(1'b1),
       .clk(CLK_100MHZ),
-      .input_bcd({SW[3:0], counter[11:8], counter[7:4], counter[3:0]}),
+      .input_bcd({SW[3:0], unlock_pin[11:8], unlock_pin[7:4], unlock_pin[3:0]}),
       .an(D1_AN),
       .seg(D1_SEG[6:0])
   );
+
+  assign LED[3:0] = unlock_pin[15:12];
 
   assign D1_SEG[7] = 1'b1;
   logic [3:0] q0, q1, q2, q3;
@@ -39,13 +34,13 @@ module top (
 
   logic divided_clk;
 
-  clock_divider #(10000000) (    // 100Hz
-      .rst_n(SW[15]),
+  clock_divider #(1000000) (    // 100Hz
+      .rst_n(SW[14]),
       .clk_in(CLK_100MHZ),
       .clk_out(divided_clk)
   );
 
-  assign LED[0] = divided_clk;
+  //assign LED[0] = divided_clk;
 
   logic debounced_valid_key;
 
@@ -71,14 +66,16 @@ module top (
       .clk(CLK_100MHZ),
       .rstn(SW[15]),
       .key(SW[3:0]),
-//      .valid_key(valid_key),
-      .valid_key(debounced_valid_key),
+      .valid_key(valid_key),
       .state(state),
       .q0(q0),
       .q1(q1),
       .q2(q2),
-      .q3(q3)
+      .q3(q3),
+      .unlock_pin(unlock_pin)
   );
+
+  logic [15:0] unlock_pin;
 
   assign RGB1[1] = ~state[0];
   assign RGB1[0] = state[0];

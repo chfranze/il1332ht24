@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Sun Oct 13 18:13:33 2024
+| Date         : Sun Oct 13 20:01:56 2024
 | Host         : Christoffer-Dator running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    11 |
-|    Minimum number of control sets                        |    11 |
+| Total control sets                                       |    12 |
+|    Minimum number of control sets                        |    12 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    28 |
+| Unused register locations in slices containing registers |    29 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    11 |
+| Total control sets |    12 |
 | >= 0 to < 4        |     3 |
 | >= 4 to < 6        |     1 |
-| >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     0 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     1 |
 | >= 10 to < 12      |     0 |
-| >= 12 to < 14      |     1 |
-| >= 14 to < 16      |     0 |
-| >= 16              |     6 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     5 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              36 |           11 |
-| No           | No                    | Yes                    |              48 |           13 |
+| No           | No                    | No                     |               9 |            5 |
+| No           | No                    | Yes                    |              46 |           12 |
 | No           | Yes                   | No                     |              32 |            8 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              16 |            5 |
+| Yes          | No                    | No                     |               6 |            3 |
+| Yes          | No                    | Yes                    |              30 |           10 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -73,17 +73,18 @@ Table of Contents
 +-----------------------------------+--------------------------------------+--------------------------------------+------------------+----------------+--------------+
 |            Clock Signal           |             Enable Signal            |           Set/Reset Signal           | Slice Load Count | Bel Load Count | Bels / Slice |
 +-----------------------------------+--------------------------------------+--------------------------------------+------------------+----------------+--------------+
-|  nolabel_line42/LED_OBUF[0]       |                                      | digital_lock/shift_reg_inst/SW[15]   |                1 |              1 |         1.00 |
+|  nolabel_line37/clk               |                                      | digital_lock/shift_reg_inst/SW[15]   |                1 |              1 |         1.00 |
 |  left_driver/clock_divider_0/CLK  |                                      |                                      |                1 |              2 |         2.00 |
 |  right_driver/clock_divider_0/CLK |                                      |                                      |                1 |              2 |         2.00 |
-|  CLK_100MHZ_IBUF_BUFG             |                                      |                                      |                2 |              4 |         2.00 |
-|  debounced_valid_key_BUFG         |                                      |                                      |                3 |             12 |         4.00 |
-|  digital_lock/unlock_pin__0       |                                      |                                      |                4 |             16 |         4.00 |
+|  CLK_100MHZ_IBUF_BUFG             |                                      |                                      |                3 |              5 |         1.67 |
+|  CLK_100MHZ_IBUF_BUFG             | digital_lock/unlock_pin1             |                                      |                3 |              6 |         2.00 |
+|  CLK_100MHZ_IBUF_BUFG             |                                      | digital_lock/shift_reg_inst/SW[15]   |                4 |              8 |         2.00 |
+|  CLK_100MHZ_IBUF_BUFG             | digital_lock/unlock_pin1             | digital_lock/shift_reg_inst/SW[15]   |                5 |             14 |         2.80 |
 |  CLK_100MHZ_IBUF_BUFG             |                                      | left_driver/clock_divider_0/clk_out  |                4 |             16 |         4.00 |
 |  CLK_100MHZ_IBUF_BUFG             |                                      | right_driver/clock_divider_0/clk_out |                4 |             16 |         4.00 |
 |  CLK_100MHZ_IBUF_BUFG             | digital_lock/entered_pin[15]_i_1_n_0 | digital_lock/shift_reg_inst/SW[15]   |                5 |             16 |         3.20 |
-|  debounced_valid_key_BUFG         |                                      | digital_lock/shift_reg_inst/SW[15]   |                5 |             16 |         3.20 |
-|  CLK_100MHZ_IBUF_BUFG             |                                      | digital_lock/shift_reg_inst/SW[15]   |                7 |             31 |         4.43 |
+|  valid_key_BUFG                   |                                      | digital_lock/shift_reg_inst/SW[15]   |                3 |             16 |         5.33 |
+|  CLK_100MHZ_IBUF_BUFG             |                                      | nolabel_line37/counter[19]_i_2_n_0   |                4 |             21 |         5.25 |
 +-----------------------------------+--------------------------------------+--------------------------------------+------------------+----------------+--------------+
 
 
