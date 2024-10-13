@@ -6,8 +6,9 @@ module key_press_detector(
 );
 
     typedef enum logic {
-        RELEASED = 1'b0,
-        PRESSED  = 1'b1
+        RELEASED = 2'b00,
+        PRESSED  = 2'b01,
+        PRESSED_TO_RELEASED = 2'b10
     } state_ty;
 
     state_ty current_state, next_state;
@@ -18,12 +19,17 @@ module key_press_detector(
             RELEASED: begin
                 if (debounced_valid_key)
                     next_state = PRESSED;
-                else
+            end
+
+            PRESSED: begin
+                next_state = PRESSED_TO_RELEASED; // Transition back to RELEASED after one clock
+            end
+
+            PRESSED_TO_RELEASED: begin
+                if (~debounced_valid_key)
                     next_state = RELEASED;
             end
-            PRESSED: begin
-                next_state = RELEASED; // Transition back to RELEASED after one clock
-            end
+
             default: next_state = RELEASED;
         endcase
     end
@@ -40,7 +46,7 @@ module key_press_detector(
     always_ff @(posedge clk or negedge rstn) begin
         if (!rstn)
             valid_key <= 1'b0;  // Reset valid_key
-        else if (current_state == RELEASED && debounced_valid_key)
+        else if (current_state == PRESSED)
             valid_key <= 1'b1;  // Assert valid_key for one clock cycle
         else
             valid_key <= 1'b0;  // Deassert valid_key in other cases
