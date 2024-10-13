@@ -1,4 +1,4 @@
-./src/clk_divider.sv
+./src/clock_divider.sv
 ./src/d_flop.sv
 ./src/digital_lock.sv
 ./src/key_press_detector.sv

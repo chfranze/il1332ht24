@@ -1,20 +1,25 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="chris" Host="LAPTOP-TFLQ21VU" Pid="10184" HostCore="8" HostMemory="034023059456">
+    <Process Command="vivado.bat" Owner="Christoffer Franzen" Host="CHRISTOFFER-DAT" Pid="19536" HostCore="8" HostMemory="017140449280">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="chris" Host="LAPTOP-TFLQ21VU" Pid="14804" HostCore="8" HostMemory="034023059456">
+    <Process Command="vivado.bat" Owner="Christoffer Franzen" Host="CHRISTOFFER-DAT" Pid="15180" HostCore="8" HostMemory="017140449280">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="chris" Host="LAPTOP-TFLQ21VU" Pid="6956" HostCore="8" HostMemory="034023059456">
+    <Process Command="vivado.bat" Owner="Christoffer Franzen" Host="CHRISTOFFER-DAT" Pid="7304" HostCore="8" HostMemory="017140449280">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="chris" Host="LAPTOP-TFLQ21VU" Pid="32468" HostCore="8" HostMemory="034023059456">
+    <Process Command="vivado.bat" Owner="Christoffer Franzen" Host="CHRISTOFFER-DAT" Pid="1128" HostCore="8" HostMemory="017140449280">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Christoffer Franzen" Host="CHRISTOFFER-DAT" Pid="20636" HostCore="8" HostMemory="017140449280">
     </Process>
 </ProcessHandle>

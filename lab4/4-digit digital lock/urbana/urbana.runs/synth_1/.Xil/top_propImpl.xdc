@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc} rfile:../../../../urbana.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{B:/Desktop/dev/il1332ht24/lab4/4-digit digital lock/urbana.xdc} rfile:../../../../urbana.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN N15 IOSTANDARD LVCMOS33} [get_ports {CLK_100MHZ}]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]

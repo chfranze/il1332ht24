@@ -5,79 +5,74 @@ module top (
     output logic [15:0] LED,
     output logic RGB0[2:0],
     output logic RGB1[2:0],
-    output logic [7:0] D1_SEG,
-    output logic [3:0] D1_AN
+    output logic [7:0] D1_SEG, D0_SEG,
+    output logic [3:0] D1_AN, D0_AN
 );
 
-  kw4281_driver driver (
+  kw4281_driver right_driver (
       .rst_n(1'b1),
       .clk(CLK_100MHZ),
-      .input_bcd({SW[3:0], SW[7:4], SW[11:8], SW[15:12]}),
+      .input_bcd({SW[3:0], 4'b0, 4'b0, 4'b0}),
       .an(D1_AN),
       .seg(D1_SEG[6:0])
   );
 
-  // assign D1_SEG[7] = 1'b1; 
-
-  // logic divided_clk;
-
-  // clock_divider #(100000000) (
-  //     .rst_n(SW[15]),
-  //     .clk_in(CLK_100MHZ),
-  //     .clk_out(divided_clk)
-  // );
-
-  // logic debounced_valid_key;
-
-  // register register (
-  //     .divided_clk(divided_clk),
-  //     .rstn(SW[15]),
-  //     .valid_key_BTN(BTN[0]),
-  //     .debounced_valid_key(debounced_valid_key)
-  // );
-
-  // logic valid_key;
-
-  // key_press_detector key_press_detector (
-  //     .clk(CLK_100MHZ),
-  //     .rstn(SW[15]),
-  //     .debounced_valid_key(debounced_valid_key),
-  //     .valid_key(valid_key)
-  // );
-
   assign D1_SEG[7] = 1'b1;
+  logic [3:0] q0, q1, q2, q3;
 
-//   // Use only the first display (anode control)
-//   assign D1_AN = 4'b1110;  // Activate only the first 7-segment display
+  kw4281_driver left_driver (
+      .rst_n(1'b1),
+      .clk(CLK_100MHZ),
+      .input_bcd({q0, q1, q2, q3}),
+      .an(D0_AN),
+      .seg(D0_SEG[6:0])
+  );
 
-//   logic key[3:0];
+  assign D0_SEG[7] = 1'b1;
 
-//   // Assign switches to the key input
-//   assign key[0] = SW[0];
-//   assign key[1] = SW[1];
-//   assign key[2] = SW[2];
-//   assign key[3] = SW[3];
+  logic divided_clk;
 
-//   // Instantiate the BCD to 7-segment decoder
-//   bcd27s decoder (
-//       .bcd(key),
-//       .seg(seg_out)
-//   );
+  clock_divider #(10000000) (    // 100Hz
+      .rst_n(SW[15]),
+      .clk_in(CLK_100MHZ),
+      .clk_out(divided_clk)
+  );
 
-//   // Connect the 7-segment output
-//   assign D1_SEG[6:0] = seg_out;
-//   assign D1_SEG[7]   = 1'b1;  // Decimal point off
+  assign LED[0] = divided_clk;
 
-  // logic state;
+  logic debounced_valid_key;
 
-  // digital_lock digital_lock (
-  //     .clk(CLK_100MHZ),
-  //     .rstn(SW[15]),
-  //     .key(key),
-  //     .valid_key(valid_key),
-  //     .state(state)
-  // );
+  register register (
+      .divided_clk(divided_clk),
+      .rstn(SW[15]),
+      .valid_key_BTN(BTN[0]),
+      .debounced_valid_key(debounced_valid_key)
+  );
 
-  // assign RGB1[1] = state;
+  logic valid_key;
+
+  key_press_detector key_press_detector (
+      .clk(CLK_100MHZ),
+      .rstn(SW[15]),
+      .debounced_valid_key(debounced_valid_key),
+      .valid_key(valid_key)
+  );
+
+  logic state;
+
+  digital_lock digital_lock (
+      .clk(CLK_100MHZ),
+      .rstn(SW[15]),
+      .key(SW[3:0]),
+      .valid_key(valid_key),
+      .state(state),
+      .q0(q0),
+      .q1(q1),
+      .q2(q2),
+      .q3(q3)
+  );
+
+  assign RGB1[1] = ~state;
+  assign RGB1[0] = state;
 
 endmodule

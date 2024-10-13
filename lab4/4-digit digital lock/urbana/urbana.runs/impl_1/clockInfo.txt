@@ -1,7 +1,7 @@
 -------------------------------------
 | Tool Version : Vivado v.2024.1
-| Date         : Sun Oct 13 15:43:31 2024
-| Host         : LAPTOP-TFLQ21VU
+| Date         : Sun Oct 13 17:02:18 2024
+| Host         : Christoffer-Dator
 | Design       : design_1
 | Device       : xc7s50-csga324-1--
 -------------------------------------

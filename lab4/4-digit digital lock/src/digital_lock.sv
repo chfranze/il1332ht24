@@ -3,7 +3,8 @@ module digital_lock (
     input logic rstn,
     input logic [3:0] key,
     input logic valid_key,
-    output logic state
+    output logic state,
+    output logic [3:0] q0, q1, q2, q3
 );
 
     // Define state
@@ -21,7 +22,7 @@ module digital_lock (
     logic [2:0]  pin_digit_count;        // Count the number of entered digits during new PIN entry
 
     // SIPO shift register for entered PIN (shift in 4 digits)
-    logic [3:0] q0, q1, q2, q3;  // Outputs from the SIPO shift register
+    //logic [3:0] q0, q1, q2, q3;  // Outputs from the SIPO shift register
 
     // Instantiate the SIPO shift register
     sipo_shift_register_hex shift_reg_inst (
@@ -90,8 +91,6 @@ module digital_lock (
                     unlock_pin <= entered_pin; // Update unlock_pin with new PIN
                     next_state = UNLOCKED;     // Go back to unlocked state
                 end
-                else if (valid_key && key == 'hB)  // Press B to lock
-                    next_state = LOCKED;
             end
 
             default: next_state = UNLOCKED;
