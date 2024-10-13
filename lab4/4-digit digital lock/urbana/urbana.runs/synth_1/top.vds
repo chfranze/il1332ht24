@@ -1,0 +1,609 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sun Oct 13 15:37:38 2024
+# Process ID: 32804
+# Current directory: C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana/urbana.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana/urbana.runs/synth_1/top.vds
+# Journal file: C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana/urbana.runs/synth_1\vivado.jou
+# Running On        :LAPTOP-TFLQ21VU
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz
+# CPU Frequency     :3302 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :34023 MB
+# Swap memory       :14495 MB
+# Total Virtual     :48518 MB
+# Available Virtual :23605 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 484.930 ; gain = 199.836
+Command: synth_design -top top -part xc7s50csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Device 21-9227] Part: xc7s50csga324-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 31548
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1330.219 ; gain = 447.664
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/src/top.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'kw4281_driver' [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/src/kw4281_driver.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/src/clock_divider.sv:1]
+	Parameter DIVISOR bound to: 100000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (0#1) [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/src/clock_divider.sv:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/src/kw4281_driver.sv:36]
+INFO: [Synth 8-6157] synthesizing module 'bcd27s' [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/src/bcd27s.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'bcd27s' (0#1) [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/src/bcd27s.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'kw4281_driver' (0#1) [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/src/kw4281_driver.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/src/top.sv:1]
+WARNING: [Synth 8-3848] Net LED in module/entity top does not have driver. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/src/top.sv:5]
+WARNING: [Synth 8-3848] Net RGB0[2] in module/entity top does not have driver. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/src/top.sv:6]
+WARNING: [Synth 8-3848] Net RGB0[1] in module/entity top does not have driver. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/src/top.sv:6]
+WARNING: [Synth 8-3848] Net RGB0[0] in module/entity top does not have driver. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/src/top.sv:6]
+WARNING: [Synth 8-3848] Net RGB1[2] in module/entity top does not have driver. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/src/top.sv:7]
+WARNING: [Synth 8-3848] Net RGB1[1] in module/entity top does not have driver. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/src/top.sv:7]
+WARNING: [Synth 8-3848] Net RGB1[0] in module/entity top does not have driver. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/src/top.sv:7]
+WARNING: [Synth 8-3917] design top has port D1_SEG[7] driven by constant 1
+WARNING: [Synth 8-7129] Port LED[15] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[14] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[13] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[12] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[11] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[10] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[9] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[8] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[7] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[6] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[5] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[4] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[3] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RGB0[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RGB0[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RGB0[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RGB1[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RGB1[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RGB1[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTN[3] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTN[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTN[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTN[0] in module top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1437.879 ; gain = 555.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1437.879 ; gain = 555.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1437.879 ; gain = 555.324
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1437.879 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc]
+WARNING: [Vivado 12-584] No ports matched 'D0_AN[0]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_AN[1]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_AN[2]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_AN[3]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[0]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[1]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[2]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[3]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[4]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[5]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[6]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[7]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_DO_P'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D0_N'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D1_P'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D1_N'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D2_P'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D2_N'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_CLK_P'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_CLK_N'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_CEC_IN'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_HPD'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_I2C_SCL'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_I2C-SDA'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_SPI_MISO'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_SPI_MOSI'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_SPI_CCLK'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_SS_B'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_RESET_B'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_INT'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_DQ0'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_DQ1'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_DQ2'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_DQ3'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_CMD'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_CLK'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:117]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:117]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_CD_N'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:118]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:118]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SPKL'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:121]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:121]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SPKR'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:122]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:122]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'MIC_CLK'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'MIC_DATA'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:126]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:126]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AD1_P'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:129]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:129]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AD1_N'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:130]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AD15_P'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:131]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:131]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AD15_N'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:132]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:132]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SEL_JOYSTICK'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:133]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:133]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BLE_UART_TXD'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:136]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:136]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BLE_UART_RXD'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BLE_UART_RTS'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BLE_UART_CTS'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:139]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:139]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'UART_TXD'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:140]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:140]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'UART_RXD'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:141]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSPI_DQ0'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSPI_DQ1'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:145]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:145]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSPI_DQ2'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSPI_DQ3'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSPI_CS_B'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:148]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:148]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSPI_RESET_B'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SERVO0'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SERVO1'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:153]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SERVO2'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:154]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:154]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SERVO3'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:155]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:155]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA1_P'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:158]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:158]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA1_N'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:159]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:159]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA2_P'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:160]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:160]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA2_N'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:161]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:161]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA3_P'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:162]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:162]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA3_N'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:163]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:163]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA4_P'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:164]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:164]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA4_N'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:165]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:165]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB1_P'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:168]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:168]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB1_N'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:169]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:169]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB2_P'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:170]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:170]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB2_N'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:171]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:171]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB3_P'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:172]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:172]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB3_N'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:173]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:173]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB4_P'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:174]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:174]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB4_N'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:175]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:175]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JAB_0'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:178]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:178]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JAB_1'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:179]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:179]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JAB_2'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:180]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:180]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JAB_3'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:181]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:181]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JAB_4'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:182]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:182]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JAB_5'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:183]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:183]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ddr3_ck_n[0]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:186]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:186]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ddr3_ck_p[0]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:187]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:187]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ddr3_dq[0]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:191]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:191]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ddr3_dq[0]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:192]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:192]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ddr3_dq[0]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:193]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:193]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ddr3_dq[0]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:194]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:194]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ddr3_dq[1]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:197]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:197]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ddr3_dq[1]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:198]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:198]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ddr3_dq[1]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:199]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:199]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ddr3_dq[1]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:200]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:200]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ddr3_dq[2]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:203]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:203]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ddr3_dq[2]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:204]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:204]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ddr3_dq[2]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:205]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:205]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ddr3_dq[2]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:206]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:206]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ddr3_dq[3]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:209]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:209]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ddr3_dq[3]'. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:210]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:210]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:210]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-163] Missing value for option 'objects', please type 'set_property -help' for usage info. [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc:463]
+Finished Parsing XDC File [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1446.219 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1446.219 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1446.219 ; gain = 563.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1446.219 ; gain = 563.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 1446.219 ; gain = 563.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 1446.219 ; gain = 563.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input    4 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design top has port D1_SEG[7] driven by constant 1
+WARNING: [Synth 8-7129] Port LED[15] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[14] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[13] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[12] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[11] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[10] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[9] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[8] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[7] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[6] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[5] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[4] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[3] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RGB0[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RGB0[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RGB0[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RGB1[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RGB1[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RGB1[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTN[3] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTN[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTN[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTN[0] in module top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 1446.219 ; gain = 563.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 1446.219 ; gain = 563.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 1446.219 ; gain = 563.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 1452.812 ; gain = 570.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 1452.812 ; gain = 570.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 1452.812 ; gain = 570.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 1452.812 ; gain = 570.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 1452.812 ; gain = 570.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 1452.812 ; gain = 570.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 1452.812 ; gain = 570.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     4|
+|3     |LUT1   |    17|
+|4     |LUT2   |     5|
+|5     |LUT4   |    11|
+|6     |LUT5   |     2|
+|7     |LUT6   |     5|
+|8     |FDRE   |    14|
+|9     |FDSE   |     6|
+|10    |IBUF   |    17|
+|11    |OBUF   |    12|
+|12    |OBUFT  |    22|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 1452.812 ; gain = 570.258
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:30 . Memory (MB): peak = 1452.812 ; gain = 561.918
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 1452.812 ; gain = 570.258
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1456.793 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1460.469 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 87a154c
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 162 Warnings, 101 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1460.469 ; gain = 975.539
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1460.469 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/chris/OneDrive/Skrivbord/dev/Lab/lab4/4-digit digital lock/urbana/urbana.runs/synth_1/top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 13 15:38:26 2024...
