@@ -36,3 +36,6 @@ lab4/traffic light/work/*
 lab4/traffic light/work/_lib1_0.qtl
 lab4/traffic light/vsim.wlf
 lab1/vsim_stacktrace.vstf
+lab4/work/*
+lab4/4-digit digital lock/work/*
+lab4/4-digit digital lock/vsim.wlf

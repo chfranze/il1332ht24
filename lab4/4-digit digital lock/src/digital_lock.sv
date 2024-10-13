@@ -18,7 +18,7 @@ module digital_lock (
 
     logic [15:0] unlock_pin = 16'h1234;  // Default PIN '1234'
     logic [15:0] entered_pin;            // For storing entered PIN
-    logic [1:0]  pin_digit_count;        // Count the number of entered digits during new PIN entry
+    logic [2:0]  pin_digit_count;        // Count the number of entered digits during new PIN entry
 
     // SIPO shift register for entered PIN (shift in 4 digits)
     logic [3:0] q0, q1, q2, q3;  // Outputs from the SIPO shift register

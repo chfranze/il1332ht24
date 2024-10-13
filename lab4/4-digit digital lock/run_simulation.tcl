@@ -13,5 +13,6 @@ add wave /*
 
 add wave -position end  sim:/tb_digital_lock/uut/unlock_pin
 add wave -position end  sim:/tb_digital_lock/uut/entered_pin
+add wave -position end  sim:/tb_digital_lock/uut/pin_digit_count
 
 run -all
