@@ -3,8 +3,11 @@ module digital_lock (
     input logic rstn,
     input logic [3:0] key,
     input logic valid_key,
-    output logic state,
-    output logic [3:0] q0, q1, q2, q3
+    output logic [1:0] state,
+    output logic [3:0] q0, 
+    output logic [3:0] q1, 
+    output logic [3:0] q2, 
+    output logic [3:0] q3
 );
 
     // Define state
@@ -102,9 +105,9 @@ module digital_lock (
         state = 0; 
 
         case (pres_state)
-            UNLOCKED: state = 0;
-            LOCKED: state = 1;
-            ENTERING_NEW_PIN: state = 0;
+            UNLOCKED: state = 2'b00;
+            LOCKED: state = 2'b01;
+            ENTERING_NEW_PIN: state = 2'b10;
         endcase
     end
 

@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2024.1
-| Date         : Sun Oct 13 17:02:18 2024
+| Date         : Sun Oct 13 18:13:32 2024
 | Host         : Christoffer-Dator
 | Design       : design_1
 | Device       : xc7s50-csga324-1--

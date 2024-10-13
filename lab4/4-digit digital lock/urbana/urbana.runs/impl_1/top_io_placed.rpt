@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date                      : Sun Oct 13 17:02:19 2024
+| Date                      : Sun Oct 13 18:13:33 2024
 | Host                      : Christoffer-Dator running 64-bit major release  (build 9200)
 | Command                   : report_io -file top_io_placed.rpt
 | Design                    : top
@@ -63,7 +63,7 @@ Table of Contents
 | B8         |             | Dedicated  | VCCBATT_0                    | Config      |             |       0 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | B9         |             |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | B10        |             | High Range | VCCO_16                      | VCCO        |             |      16 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
-| B11        | RGB1[2]     | High Range | IO_L14P_T2_SRCC_16           | TRISTATE    | LVCMOS33    |      16 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| B11        | RGB1[2]     | High Range | IO_L14P_T2_SRCC_16           | OUTPUT      | LVCMOS33    |      16 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | B12        |             | High Range | VCCO_16                      | VCCO        |             |      16 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | B13        |             | High Range | IO_L1P_T0_AD0P_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | B14        |             | High Range | IO_L2P_T0_AD8P_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

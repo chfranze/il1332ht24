@@ -9,10 +9,17 @@ module top (
     output logic [3:0] D1_AN, D0_AN
 );
 
+  logic [11:0] counter;
+
+  always_ff @(posedge debounced_valid_key) begin
+        counter <= counter + 12'b1;
+  end
+    
+
   kw4281_driver right_driver (
       .rst_n(1'b1),
       .clk(CLK_100MHZ),
-      .input_bcd({SW[3:0], 4'b0, 4'b0, 4'b0}),
+      .input_bcd({SW[3:0], counter[11:8], counter[7:4], counter[3:0]}),
       .an(D1_AN),
       .seg(D1_SEG[6:0])
   );
@@ -58,13 +65,14 @@ module top (
       .valid_key(valid_key)
   );
 
-  logic state;
+  logic [1:0] state;
 
   digital_lock digital_lock (
       .clk(CLK_100MHZ),
       .rstn(SW[15]),
       .key(SW[3:0]),
-      .valid_key(valid_key),
+//      .valid_key(valid_key),
+      .valid_key(debounced_valid_key),
       .state(state),
       .q0(q0),
       .q1(q1),
@@ -72,7 +80,8 @@ module top (
       .q3(q3)
   );
 
-  assign RGB1[1] = ~state;
-  assign RGB1[0] = state;
+  assign RGB1[1] = ~state[0];
+  assign RGB1[0] = state[0];
+  assign RGB1[2] = state[1];
 
 endmodule

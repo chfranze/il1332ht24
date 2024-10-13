@@ -23,3 +23,23 @@
     <Process Command="vivado.bat" Owner="Christoffer Franzen" Host="CHRISTOFFER-DAT" Pid="20636" HostCore="8" HostMemory="017140449280">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Christoffer Franzen" Host="CHRISTOFFER-DAT" Pid="5312" HostCore="8" HostMemory="017140449280">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Christoffer Franzen" Host="CHRISTOFFER-DAT" Pid="20440" HostCore="8" HostMemory="017140449280">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Christoffer Franzen" Host="CHRISTOFFER-DAT" Pid="13692" HostCore="8" HostMemory="017140449280">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Christoffer Franzen" Host="CHRISTOFFER-DAT" Pid="13904" HostCore="8" HostMemory="017140449280">
+    </Process>
+</ProcessHandle>
